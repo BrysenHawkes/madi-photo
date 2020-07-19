@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+  --header-height: 120px;
+  --footer-height:80px;
+  --logo-height: 110px;
+  --min-width: 780px;
+  --header-img-height: 110px;
+  --content-height: 720px;
+  --custom-shadow: rgba(17, 17, 17, 0.1);
+  --custom-grey-tint: rgba(36, 36, 36, 0.6);
+  --custom-light-grey: #f1f1f1;
+  --custom-light-blue: #aecfd6;
+  --custom-dark-blue: #326273;
+  --custom-pink: #eec0aa;
+  --custom-white: #ffffff;
+}
+
+.navbar{
+  background-color: var(--custom-light-grey);
+  height: var(--header-height);
+}
+.container-fluid img{
+  max-height: var(--header-img-height);
+}
+
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  font-family: 'Roboto';
+  width: 100%;
+  min-width: var(--min-width);
+  height: var(--header-height);
+  background-color: var(--custom-light-grey);
+}
+
+.header_link{
+  height: 100%;
+  width: 20%;
+  float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_link a{
+  color: var(--custom-light-blue);
+  text-decoration: none;
+}
+
+.header_link a:hover{
+  color: var(--custom-pink);
+}
+
+.header img{
+  height: var(--logo-height);
+}
+
+.about_content{
+  font-family: 'Roboto';
+  width: 100%;
+  display: block;
+  min-width: var(--min-width);
+  height: var(--content-height);
+  background-color: var(--custom-light-blue);
+  overflow: hidden;
+}
+
+.about_content img{
+  max-width: 100%;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.overlay{
+  font-family: 'Roboto';
+  background-color: var(--custom-grey-tint);
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  width: 30%;
+  height: auto;
+  z-index: 9;
+  text-align: center;
+  padding: 30px;
+  padding-top: 60px;
+  color: white;
+}
+
+.gallery_content{
+  font-family: 'Roboto';
+  padding-top: 80px;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 230px 230px 230px;
+  grid-template-rows: 230px 230px 230px;
+  justify-content: space-around;
+  width: 100%;
+  min-width: var(--min-width);
+  background-color: var(--custom-light-grey);
+}
+
+.gallery_item{
+  background-color: var(--custom-pink);
+  overflow: hidden;
+  justify-content: center;
+}
+
+.gallery_item img{
+  margin: auto;
+  max-width: 150%;
+  max-height: 150%;
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.pricing_content{
+  padding: 80px;
+  width: 100%;
+  min-width: var(--min-width);
+  height: var(--content-height);
+  background-color: var(--custom-light-grey);
+  text-align: center;
+}
+
+.outer_box{
+  display: inline-block;
+  width: 320px;
+  height: 560px;
+  background-color: var(--custom-pink);
+}
+
+.inner_box{
+  font-family: 'Roboto';
+  display: inline-block;
+  width: 314px;
+  height: 560px;
+  background-color: var(--custom-light-grey);
+  color: var(--custom-dark-blue);
+}
+
+.footer{
+  font-family: 'Roboto';
+  width: 100%;
+  min-width: var(--min-width);
+  text-align: center;
+  height: var(--footer-height);
+  background-color: var(--custom-dark-blue);
+  color: white;
+  font-size: 14px;
+}
+
+/*---May Need---*/
+.navbar-toggler-icon{
+  color: var(--custom-light-blue);
+}
+.nav-link{
+  color: var(--custom-light-blue);
+  text-transform: uppercase;
+}
+.nav-link:hover{
+  color: var(--custom-pink);
+}
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+
